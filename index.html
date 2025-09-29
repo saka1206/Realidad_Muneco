@@ -1,171 +1,46 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
-    <title>Muñeco de Nieve X3DOM</title>
-    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'></script> 
-    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link>
+    <meta charset="utf-8">
+    <title>Muñeco de Nieve en A-Frame</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
   <body>
-    <h1>Muñeco de Nieve 3D con Gorro, Bufanda Visible y Manos de Ramas</h1>
-    <x3d width='700px' height='550px'>
-      <scene>
-        <!-- Cuerpo del muñeco: 3 esferas -->
-        <transform translation='0 0 0'>
-          <shape>
-            <appearance><material diffuseColor='1 1 1'></material></appearance>
-            <sphere radius='1.4'/>
-          </shape>
-        </transform>
-        <transform translation='0 2.1 0'>
-          <shape>
-            <appearance><material diffuseColor='1 1 1'></material></appearance>
-            <sphere radius='1'/>
-          </shape>
-        </transform>
-        <transform translation='0 3.5 0'>
-          <shape>
-            <appearance><material diffuseColor='1 1 1'></material></appearance>
-            <sphere radius='0.7'/>
-          </shape>
-        </transform>
-        <!-- Gorro negro (cilindro y disco) -->
-        <transform translation='0 4.5 0'>
-          <shape>
-            <appearance><material diffuseColor='0 0 0'></material></appearance>
-            <cylinder radius='0.5' height='0.7'/>
-          </shape>
-        </transform>
-        <transform translation='0 4.12 0'>
-          <shape>
-            <appearance><material diffuseColor='0 0 0'></material></appearance>
-            <cylinder radius='0.8' height='0.12'/>
-          </shape>
-        </transform>
-        <!-- Nariz zanahoria partida (dos conos) -->
-        <transform translation='0 3.5 0.61' rotation='1 0 0 0.1'>
-          <shape>
-            <appearance>
-              <material diffuseColor='1 0.45 0.1' emissiveColor='1 0.5 0.15'></material>
-            </appearance>
-            <cone bottomRadius='0.11' height='0.45'/>
-          </shape>
-        </transform>
-        <transform translation='0 3.5 0.98' rotation='1 0 0 0.1'>
-          <shape>
-            <appearance>
-              <material diffuseColor='0.8 0.3 0' emissiveColor='1 0.4 0'></material>
-            </appearance>
-            <cone bottomRadius='0.07' height='0.23'/>
-          </shape>
-        </transform>
-        <!-- Ojos -->
-        <transform translation='-0.18 3.67 0.65'>
-          <shape>
-            <appearance><material diffuseColor='0 0 0'></material></appearance>
-            <sphere radius='0.06'/>
-          </shape>
-        </transform>
-        <transform translation='0.18 3.67 0.65'>
-          <shape>
-            <appearance><material diffuseColor='0 0 0'></material></appearance>
-            <sphere radius='0.06'/>
-          </shape>
-        </transform>
-        <!-- Botones -->
-        <transform translation='0 2.8 1.22'>
-          <shape>
-            <appearance><material diffuseColor='0 0 0'></material></appearance>
-            <sphere radius='0.07'/>
-          </shape>
-        </transform>
-        <transform translation='0 2.3 1.32'>
-          <shape>
-            <appearance><material diffuseColor='0 0 0'></material></appearance>
-            <sphere radius='0.07'/>
-          </shape>
-        </transform>
-        <transform translation='0 1.6 1.22'>
-          <shape>
-            <appearance><material diffuseColor='0 0 0'></material></appearance>
-            <sphere radius='0.07'/>
-          </shape>
-        </transform>
-        <!-- Bufanda azul visible alrededor del cuello (caja simulando la tela) -->
-        <transform translation="0 2.65 0" rotation="0 1 0 0.25">
-          <shape>
-            <appearance><material diffuseColor="0 0.3 0.9"></material></appearance>
-            <box size="1.12 0.19 0.27"/>
-          </shape>
-        </transform>
-        <!-- Nudo de la bufanda (cilindro) -->
-        <transform translation="0.56 2.63 0.04" rotation="0 0 1 1.57">
-          <shape>
-            <appearance><material diffuseColor="0 0.3 0.9"></material></appearance>
-            <cylinder height="0.17" radius="0.12"/>
-          </shape>
-        </transform>
-        <!-- Parte colgante de la bufanda (caja) -->
-        <transform translation="0.73 2.33 0.04" rotation="0 0 0 0">
-          <shape>
-            <appearance><material diffuseColor="0 0.3 0.9"></material></appearance>
-            <box size="0.16 0.45 0.15"/>
-          </shape>
-        </transform>
-        <!-- Brazos: ramas principales, más unidos al cuerpo -->
-        <!-- Brazo izquierdo (principal) -->
-        <transform translation='-1.12 2.5 0.1' rotation='0 0 1 1.05'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.06' height='1.1'/>
-          </shape>
-        </transform>
-        <!-- Dedos izquierdo -->
-        <transform translation='-1.56 3.06 0.18' rotation='0 0 1 2.1'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.022' height='0.34'/>
-          </shape>
-        </transform>
-        <transform translation='-1.65 2.98 -0.07' rotation='0 0 1 1.5'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.018' height='0.26'/>
-          </shape>
-        </transform>
-        <transform translation='-1.42 3.13 0.0' rotation='0 0 1 1.85'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.016' height='0.21'/>
-          </shape>
-        </transform>
-        <!-- Brazo derecho (principal) -->
-        <transform translation='1.12 2.5 0.1' rotation='0 0 1 -1.05'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.06' height='1.1'/>
-          </shape>
-        </transform>
-        <!-- Dedos derecho -->
-        <transform translation='1.56 3.06 0.18' rotation='0 0 1 -2.1'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.022' height='0.34'/>
-          </shape>
-        </transform>
-        <transform translation='1.65 2.98 -0.07' rotation='0 0 1 -1.5'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.018' height='0.26'/>
-          </shape>
-        </transform>
-        <transform translation='1.42 3.13 0.0' rotation='0 0 1 -1.85'>
-          <shape>
-            <appearance><material diffuseColor='0.36 0.19 0.07'></material></appearance>
-            <cylinder radius='0.016' height='0.21'/>
-          </shape>
-        </transform>
-      </scene>
-    </x3d>
+    <a-scene>
+      <!-- Suelo -->
+      <a-plane position="0 0 -5" rotation="-90 0 0" width="20" height="20" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Cuerpo del muñeco -->
+      <a-sphere position="0 0.7 -5" radius="0.7" color="white"></a-sphere>
+      <a-sphere position="0 1.7 -5" radius="0.5" color="white"></a-sphere>
+      <a-sphere position="0 2.4 -5" radius="0.35" color="white"></a-sphere>
+
+      <!-- Gorro -->
+      <a-cylinder position="0 2.9 -5" radius="0.25" height="0.3" color="black"></a-cylinder>
+      <a-cylinder position="0 2.75 -5" radius="0.35" height="0.1" color="black"></a-cylinder>
+
+      <!-- Nariz zanahoria partida -->
+      <a-cone position="0 2.4 -4.6" radius-bottom="0.05" radius-top="0.01" height="0.2" color="orange" rotation="0 0 90"></a-cone>
+      <a-cone position="0 2.4 -4.4" radius-bottom="0.03" radius-top="0.01" height="0.1" color="#cc6600" rotation="0 0 90"></a-cone>
+
+      <!-- Ojos -->
+      <a-sphere position="-0.1 2.5 -4.65" radius="0.03" color="black"></a-sphere>
+      <a-sphere position="0.1 2.5 -4.65" radius="0.03" color="black"></a-sphere>
+
+      <!-- Botones -->
+      <a-sphere position="0 1.5 -4.7" radius="0.04" color="black"></a-sphere>
+      <a-sphere position="0 1.2 -4.7" radius="0.04" color="black"></a-sphere>
+      <a-sphere position="0 0.9 -4.7" radius="0.04" color="black"></a-sphere>
+
+      <!-- Bufanda -->
+      <a-box position="0 2.1 -5" width="0.8" height="0.1" depth="0.2" color="#0033cc" rotation="0 0 15"></a-box>
+      <a-cylinder position="0.4 2.05 -4.9" radius="0.1" height="0.1" color="#0033cc" rotation="0 0 90"></a-cylinder>
+      <a-box position="0.55 1.85 -4.9" width="0.1" height="0.3" depth="0.1" color="#0033cc"></a-box>
+
+      <!-- Brazos -->
+      <a-cylinder position="-0.7 1.7 -5" radius="0.03" height="0.8" color="#5a3e1b" rotation="0 0 45"></a-cylinder>
+      <a-cylinder position="0.7 1.7 -5" radius="0.03" height="0.8" color="#5a3e1b" rotation="0 0 -45"></a-cylinder>
+    </a-scene>
   </body>
 </html>
